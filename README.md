@@ -75,6 +75,10 @@ cd kubernetes-vagrant-centos-cluster
 
 **Note**: If this your first time to setup Kubernetes cluster with vagrant, just skip the above step and run the following command, it will download Kubernetes release automatically for you and no need to download the release next time. You can find the download address the Kubernetes releases [here](https://kubernetes.io/docs/imported/release/notes/). Download the release of version you wanted, move it to the root of this repo, rename it to `kubernetes-server-linux-amd64.tar.gz` then the `install.sh` script will skip the download step.
 
+```
+wget https://storage.googleapis.com/kubernetes-release/release/v1.15.0/kubernetes-server-linux-amd64.tar.gz
+```
+
 As this repo folder is mounted to `/vagrant` with NFS in virtual machines, you may be required to enter a password to for administrator privileges during the installation.
 
 Set up Kubernetes cluster with vagrant.
