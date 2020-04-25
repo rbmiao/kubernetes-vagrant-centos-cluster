@@ -17,8 +17,12 @@ Vagrant.configure("2") do |config|
       ip = "172.17.8.#{i+100}"
       node.vm.network "private_network", ip: ip
       node.vm.provider "virtualbox" do |vb|
-        vb.memory = "3072"
-        vb.cpus = 1
+        if n == 1 then
+          vb.memory = "2048"
+        else
+          vb.memory = "1536"
+        end
+        vb.cpus = 3
         vb.name = "node#{i}"
       end
       node.vm.provision "shell", path: "install.sh", args: [i, ip, $etcd_cluster]
