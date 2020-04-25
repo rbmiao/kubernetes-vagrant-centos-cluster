@@ -245,7 +245,7 @@ Traefik UI URL: <http://traefik.jimmysong.io>
 
 ![Traefik Ingress controller](images/traefik-ingress.gif)
 
-**EFK**
+**EFK - I skipped it because of 4G memory, otherwise it is too slow** 
 
 Run this command on your local machine.
 
